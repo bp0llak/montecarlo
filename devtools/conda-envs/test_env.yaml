@@ -1,19 +1,36 @@
+# name: test
+# channels:
+
+#   - defaults
+# dependencies:
+#     # Base depends
+#   - python
+#   - pip
+
+#     # Testing
+#   - pytest
+#   - pytest-cov
+#   - codecov
+#   - numpy
+
+#     # Pip-only installs
+#   #- pip:
+#   #  - codecov
+
 name: test
 channels:
-
-  - defaults
+  - conda-forge
 dependencies:
-    # Base depends
+  # Base depends
   - python
   - pip
 
-    # Testing
+  # Testing
   - pytest
   - pytest-cov
   - codecov
   - numpy
 
-    # Pip-only installs
-  #- pip:
-  #  - codecov
-
+  # Pip-only installs
+  - pip:
+      - .[test]
