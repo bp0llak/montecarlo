@@ -57,10 +57,10 @@ jobs:
         shell: bash -l {0}
         run: |
           pytest -v --cov=montecarlo --cov-report=xml --color=yes montecarlo/tests/
-          pytest --cov --cov-branch --cov-report=xml
+        # pytest --cov --cov-branch --cov-report=xml
 
       - name: CodeCov
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v5
         with:
           file: ./coverage.xml
           flags: unittests
